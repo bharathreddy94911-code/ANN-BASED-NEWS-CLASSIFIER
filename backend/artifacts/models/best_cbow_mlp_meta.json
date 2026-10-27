@@ -1,0 +1,1 @@
+{"version": "cbow-mlp-restored-verified", "embed_dim": 100, "hidden_dim": 128, "num_layers": 1, "dropout": 0.2, "pooling": "mean", "optimizer": "sgd", "quick_mode": true, "trained_at": "2026-10-13T23:58:44.662147"}

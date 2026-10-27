@@ -1,0 +1,29 @@
+﻿# Python / PyTorch / Backend
+__pycache__/
+*.py[cod]
+*.class
+*.pt
+*.bin
+*.pkl
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Vite / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment & OS
+.env
+.venv/
+env/
+venv/
+ENV/
+Thumbs.db
+.DS_Store
+
+# HuggingFace & Caches
+.cache/
+hf_cache/

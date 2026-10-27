@@ -1,0 +1,156 @@
+[
+  {
+    "id": "973df503",
+    "name": "CBOW_MLP (SGD, lr=0.01)",
+    "status": "completed",
+    "config": {
+      "model_type": "cbow_mlp",
+      "optimizer": "sgd",
+      "lr": 0.01,
+      "batch_size": 64,
+      "epochs": 2,
+      "embed_dim": 64,
+      "hidden_dim": 64,
+      "dropout": 0.3,
+      "cbow_window": 2,
+      "quick_mode": true
+    },
+    "results": {
+      "training_time": 20.43,
+      "val_metrics": {
+        "accuracy": 0.2378,
+        "loss": 1.3539
+      },
+      "test_metrics": {
+        "accuracy": 0.25,
+        "macro_f1": 0.1,
+        "latency_ms": 0.029
+      }
+    },
+    "created_at": "2026-10-13T15:57:57.337093"
+  },
+  {
+    "id": "exp-cbow-sgd",
+    "name": "Proposed CBOW + MLP (SGD lr=0.3)",
+    "status": "completed",
+    "config": {
+      "model_type": "cbow_mlp",
+      "optimizer": "sgd",
+      "lr": 0.3,
+      "batch_size": 64,
+      "epochs": 6,
+      "embed_dim": 100,
+      "hidden_dim": 128,
+      "dropout": 0.2,
+      "cbow_window": 2,
+      "quick_mode": true
+    },
+    "results": {
+      "training_time": 99.83,
+      "val_metrics": {
+        "accuracy": 0.868,
+        "loss": 0.4352
+      },
+      "test_metrics": {
+        "accuracy": 0.8553,
+        "macro_f1": 0.8545,
+        "latency_ms": 0.051
+      }
+    },
+    "created_at": "2026-10-13T21:28:58.937100"
+  },
+  {
+    "id": "exp-tfidf-baseline",
+    "name": "Baseline: TF-IDF + MLP (SGD lr=0.1)",
+    "status": "completed",
+    "config": {
+      "model_type": "baseline",
+      "optimizer": "sgd",
+      "lr": 0.1,
+      "batch_size": 64,
+      "epochs": 6,
+      "embed_dim": 5000,
+      "hidden_dim": 128,
+      "dropout": 0.2,
+      "cbow_window": 0,
+      "quick_mode": true
+    },
+    "results": {
+      "training_time": 19.44,
+      "val_metrics": {
+        "accuracy": 0.8631,
+        "loss": 0.3896
+      },
+      "test_metrics": {
+        "accuracy": 0.8945,
+        "macro_f1": 0.8942,
+        "latency_ms": 0.046
+      }
+    },
+    "created_at": "2026-10-13T21:29:19.221550"
+  },
+  {
+    "id": "e13ad1ca",
+    "name": "CBOW_MLP (SGD, lr=0.1, concat)",
+    "status": "completed",
+    "config": {
+      "model_type": "cbow_mlp",
+      "optimizer": "sgd",
+      "lr": 0.1,
+      "batch_size": 64,
+      "epochs": 5,
+      "embed_dim": 100,
+      "hidden_dim": 128,
+      "dropout": 0.2,
+      "pooling": "concat",
+      "cbow_window": 2,
+      "quick_mode": true
+    },
+    "results": {
+      "training_time": 175.06,
+      "val_metrics": {
+        "accuracy": 0.5153,
+        "loss": 1.0636,
+        "macro_f1": 0.4873
+      },
+      "test_metrics": {
+        "accuracy": 0.512,
+        "macro_f1": 0.4823,
+        "latency_ms": 0.165
+      }
+    },
+    "created_at": "2026-10-13T22:40:58.419043"
+  },
+  {
+    "id": "restored-verified",
+    "name": "Restored Verified CBOW + MLP (SGD lr=0.3, Mean Pooling)",
+    "status": "completed",
+    "config": {
+      "model_type": "cbow_mlp",
+      "optimizer": "sgd",
+      "lr": 0.3,
+      "batch_size": 64,
+      "epochs": 6,
+      "embed_dim": 100,
+      "hidden_dim": 128,
+      "dropout": 0.2,
+      "pooling": "mean",
+      "cbow_window": 2,
+      "quick_mode": true
+    },
+    "results": {
+      "training_time": 107.69,
+      "val_metrics": {
+        "accuracy": 0.8873,
+        "loss": 0.3504,
+        "macro_f1": 0.8876
+      },
+      "test_metrics": {
+        "accuracy": 0.8792,
+        "macro_f1": 0.8792,
+        "latency_ms": 0.027
+      }
+    },
+    "created_at": "2026-10-13T23:58:44.678283"
+  }
+]
